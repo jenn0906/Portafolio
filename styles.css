@@ -1,0 +1,160 @@
+/* Reset de márgenes y paddings */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilo del cuerpo */
+.body {
+  background-color: #101010;
+  font-family: "Arial", sans-serif;
+}
+
+/* Navbar */
+#navbar {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  background-color: #212121;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-bottom: 50px;
+}
+
+#jenny-quintero {
+  flex: 0 0 50%;
+  color: #f0f0f0;
+  font-size: 1.5rem;
+  animation: fadeIn 1s ease-in-out;
+}
+
+#navbarSupportedContent {
+  flex: 0 0 40%;
+  margin-left: 25px;
+}
+
+.nav-item {
+  display: flex;
+  text-align: center;
+  width: 150px;
+}
+
+.nav-item a {
+  color: #a7a7a7;
+  transition: color 0.3s ease;
+}
+
+.nav-item a:hover {
+  color: #f0f0f0;
+}
+
+/* Contenedor hero */
+#contenedor-hero {
+  display: flex;
+  flex-wrap: wrap;
+  color: #632c8d; 
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  font-family: 'Helvetica Neue', Arial, sans-serif; 
+}
+
+#texto {
+  font-size: 2.5rem;
+  color: #f0f0f0;
+  max-width: 800px;
+  margin-bottom: 50px;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: slideUpFade 1s ease-in-out forwards;
+  animation-delay: 0.5s;
+}
+
+#sobre-mi {
+  font-family: 'Helvetica Neue', Arial, sans-serif; /* Cambiar a una fuente moderna */
+  font-size: 16px; /* Hacer el tamaño más pequeño */
+  color: #e2e2e2; /* Cambiar color a morado oscuro, puedes usar cualquier otro color */
+  font-weight: 400; /* Peso de la fuente más ligero */
+  letter-spacing: 1px; /* Espaciado entre letras */
+  line-height: 1.5; /* Mejorar la altura de línea para legibilidad */
+  animation: zoomIn 1s ease-in-out;
+
+}
+
+
+
+/* Imagen */
+#gato {
+  width: 100%;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  animation: zoomIn 1s ease-in-out;
+}
+
+#gato img {
+  width: 100%;
+  height: auto;
+  margin-top: 30px;
+  transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+/* Footer */
+#footer {
+  background-color: #212121;
+}
+
+/* Animaciones clave */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUpFade {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Media queries para dispositivos pequeños */
+@media (max-width: 576px) {
+  #gato img {
+    max-width: 100%;
+  }
+  #jenny-quintero {
+    flex: 0 0 50%;
+    color: #f0f0f0;
+    font-size: 1.5rem;
+  }
+  #texto {
+    font-size: 1.5rem;
+    max-width: 800px;
+    margin-bottom: 50px;
+  }
+}
+
+
